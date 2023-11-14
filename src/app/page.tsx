@@ -1,11 +1,20 @@
-import { ThemeToggle } from "@/components/theme-toggle";
+import { Product } from "@/models";
+import { sanity } from "@/lib/sanity";
 
-export default function Home() {
+export default async function Home() {
+  const products = await sanity.fetch<Product[]>(`*[_type == "produto"]`, {
+    next: {
+      revalidate: 3600,
+    },
+  });
+
+  console.log(products);
+
   return (
     <main>
-      <h1>Hello world</h1>
-
-      <ThemeToggle />
+      {products.map((product) => (
+        <p key={product._id}>{product.name}</p>
+      ))}
     </main>
   );
 }
