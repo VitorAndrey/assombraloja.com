@@ -10,7 +10,7 @@ export function ProductItem({ product }: ProductItemProps) {
   const url = `/products/${product.slug}`;
   return (
     <Link href={url}>
-      <div className="bg-white p-5 shadow-lg rounded-xl w-64 h-96 flex flex-col items-center gap-3">
+      <div className="bg-white p-5 shadow-lg rounded-xl w-64 h-80 flex flex-col items-center gap-3">
         <Image
           src={product.imageUrl}
           alt={product.name}
