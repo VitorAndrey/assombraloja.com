@@ -25,7 +25,7 @@ export default function RootLayout({
     <html lang="pt-br">
       <body
         className={cn(
-          "bg-background min-h-screen font-sans antialiased w-full",
+          "bg-zinc-50 min-h-screen font-sans antialiased w-full",
           fontSans.variable,
         )}
       >

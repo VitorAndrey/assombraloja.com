@@ -1,3 +1,3 @@
 export function HeroSection() {
-  return <section className="wrapper">hero-section</section>;
+  return <section className="wrapper">Hero Section</section>;
 }

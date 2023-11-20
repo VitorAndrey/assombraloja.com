@@ -14,7 +14,7 @@ export default async function Product({ params }: ProductProps) {
 
   const product = await sanity.fetch<Product>(
     `
-  *[_type == "product" && slug.current == "camiseta-de-abobora"][0]{
+  *[_type == "product" && slug.current == "${slug}"][0]{
     _id,
     "imageUrl":image.asset->url,
     name,
