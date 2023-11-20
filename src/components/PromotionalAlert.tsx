@@ -1,15 +1,28 @@
 "use client";
 
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "@/components/ui/alert-dialog";
+
 import { Product } from "@/models";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 export function PromotionalAlert({ product }: { product: Product }) {
-  function handleIsPromotional() {
-    if (!product) return;
+  const openRef = useRef<HTMLButtonElement>(null);
 
-    setTimeout(() => {
-      window.alert("Voce encontrou um presente!");
-    }, 1000);
+  function handleReceiveCandy() {}
+
+  function handleIsPromotional() {
+    if (!product || !openRef.current) return;
+
+    openRef.current.click();
 
     localStorage.setItem(product.slug, "found");
   }
@@ -24,5 +37,26 @@ export function PromotionalAlert({ product }: { product: Product }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [product]);
 
-  return <></>;
+  return (
+    <>
+      <AlertDialog>
+        <AlertDialogTrigger ref={openRef} />
+        <AlertDialogContent>
+          <AlertDialogHeader>
+            <AlertDialogTitle>Gostosuras ou travessuras!</AlertDialogTitle>
+            <AlertDialogDescription>
+              Parabéns! Você encontrou um item promocional que faz parte do
+              especial de Halloween! Resgate seu doce e junte 10 no total para
+              conseguir cashback!
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogAction onClick={handleReceiveCandy}>
+              Resgatar!
+            </AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
+    </>
+  );
 }
