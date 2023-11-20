@@ -3,8 +3,8 @@ import { Inter as FontSans } from "next/font/google";
 
 import { ThemeProvider } from "@/components/theme-provider";
 
-import "../styles/globals.css";
 import { cn } from "@/lib/utils";
+import "../styles/globals.css";
 
 export const fontSans = FontSans({
   subsets: ["latin"],
@@ -25,7 +25,7 @@ export default function RootLayout({
     <html lang="pt-br">
       <body
         className={cn(
-          "bg-background min-h-screen font-sans antialiased",
+          "bg-background min-h-screen font-sans antialiased w-full",
           fontSans.variable,
         )}
       >

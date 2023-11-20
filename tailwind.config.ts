@@ -22,6 +22,12 @@ module.exports = {
         sans: ["var(--font-sans)", ...fontFamily.sans],
       },
       colors: {
+        theme: {
+          primary: "#7122ca",
+          secondary: "#ede7f6",
+          black: "#111111",
+          white: "#fefefefe",
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

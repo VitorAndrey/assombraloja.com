@@ -1,3 +1,3 @@
-import product from './product'
+import product from './project'
 
 export const schemaTypes = [product]

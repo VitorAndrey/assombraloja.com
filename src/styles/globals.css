@@ -60,4 +60,8 @@
   button {
     @apply transition-all hover:scale-[1.02] active:scale-[0.98];
   }
+
+  .wrapper {
+    @apply mx-auto w-[95%] max-w-7xl;
+  }
 }

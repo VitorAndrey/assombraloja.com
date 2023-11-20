@@ -1,20 +1,15 @@
-import { Product } from "@/models";
-import { sanity } from "@/lib/sanity";
+import { Header } from "@/components/header";
+import { HeroSection } from "@/components/hero-section";
+import ProductsList from "@/components/products-list";
 
 export default async function Home() {
-  const products = await sanity.fetch<Product[]>(`*[_type == "produto"]`, {
-    next: {
-      revalidate: 3600,
-    },
-  });
-
-  console.log(products);
-
   return (
-    <main>
-      {products.map((product) => (
-        <p key={product._id}>{product.name}</p>
-      ))}
-    </main>
+    <>
+      <Header />
+
+      <HeroSection />
+
+      <ProductsList />
+    </>
   );
 }
