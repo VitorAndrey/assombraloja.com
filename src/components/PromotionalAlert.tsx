@@ -20,6 +20,8 @@ export function PromotionalAlert({ product }: { product: Product }) {
     if (localStorage.getItem(product.slug)) return;
 
     if (product.halloweenPromotional) handleIsPromotional();
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [product]);
 
   return <></>;
