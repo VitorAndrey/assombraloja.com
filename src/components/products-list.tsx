@@ -14,8 +14,9 @@ export default async function ProductsList() {
     discountPercentage,
     halloweenPromotional
   }`,
+
     {
-      next: { revalidate: 1000 },
+      next: { revalidate: 10 },
     },
   );
 
