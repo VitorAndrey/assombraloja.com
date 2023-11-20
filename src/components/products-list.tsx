@@ -20,7 +20,7 @@ export default async function ProductsList() {
   );
 
   return (
-    <section className="wrapper flex flex-wrap gap-4">
+    <section className="wrapper flex justify-center flex-wrap gap-8">
       {products.map((product) => (
         <ProductItem key={product._id} product={product} />
       ))}

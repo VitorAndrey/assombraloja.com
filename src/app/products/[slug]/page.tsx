@@ -1,3 +1,4 @@
+import { PromotionalAlert } from "@/components/PromotionalAlert";
 import { sanity } from "@/lib/sanity";
 import { Product } from "@/models";
 
@@ -9,8 +10,6 @@ type ProductProps = {
 
 export default async function Product({ params }: ProductProps) {
   const { slug } = params;
-
-  console.log(slug);
 
   const product = await sanity.fetch<Product>(
     `
@@ -30,5 +29,11 @@ export default async function Product({ params }: ProductProps) {
     },
   );
 
-  return <h1>{product.name}</h1>;
+  return (
+    <div>
+      <h1>{product.name}</h1>
+
+      <PromotionalAlert product={product} />
+    </div>
+  );
 }
