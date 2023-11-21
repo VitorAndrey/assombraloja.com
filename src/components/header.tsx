@@ -14,7 +14,7 @@ import { Button } from "./ui/button";
 
 export function Header() {
   return (
-    <header className="items-center h-24">
+    <header className="items-center h-16 border-b border-b-gray-300">
       <nav className="justify-between flex items-center h-full px-8">
         <Link href="/">Assombraloja</Link>
 
