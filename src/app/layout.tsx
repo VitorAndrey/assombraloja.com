@@ -11,8 +11,8 @@ const inter = Inter({
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 
-import { ShoppingListProvider } from "@/contexts/CartContext";
 import { PointsContextProvider } from "@/contexts/PointsContext";
+import { ShoppingListProvider } from "@/contexts/ShoppingList";
 
 import { cn } from "@/lib/utils";
 import "../styles/globals.css";

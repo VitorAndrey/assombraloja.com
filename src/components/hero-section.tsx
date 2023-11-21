@@ -7,22 +7,22 @@ import { Carousel } from "@material-tailwind/react";
 export function HeroSection() {
   return (
     <section>
-      <Carousel transition={{ duration: 2 }} className="h-80">
+      <Carousel transition={{ duration: 1 }} autoplay loop className="h-80">
         <Image
           width={0}
           height={0}
           sizes="100vw"
-          src="https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2560&q=80"
+          src="/abobora.png"
           alt="image 1"
-          className="h-full w-full object-cover"
+          className="h-full w-full object-scale-down"
         />
         <Image
           width={0}
           height={0}
           sizes="100vw"
-          src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80"
+          src="/iphone.png"
           alt="image 2"
-          className="h-full w-full object-cover"
+          className="h-full w-full object-scale-down"
         />
         <Image
           width={0}
@@ -30,7 +30,7 @@ export function HeroSection() {
           sizes="100vw"
           src="https://images.unsplash.com/photo-1518623489648-a173ef7824f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2762&q=80"
           alt="image 3"
-          className="h-full w-full object-cover"
+          className="h-full w-full object-scale-down"
         />
       </Carousel>
     </section>

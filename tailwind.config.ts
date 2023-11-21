@@ -24,7 +24,7 @@ module.exports = withMT({
       },
       colors: {
         theme: {
-          primary: "#7122ca",
+          primary: "#FD6C14",
           secondary: "#ede7f6",
           black: "#111111",
           white: "#fefefefe",
