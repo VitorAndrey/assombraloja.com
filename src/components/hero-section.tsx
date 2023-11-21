@@ -6,8 +6,8 @@ import { Carousel } from "@material-tailwind/react";
 
 export function HeroSection() {
   return (
-    <section className="py-8">
-      <Carousel transition={{ duration: 2 }} className="h-[300px]">
+    <section>
+      <Carousel transition={{ duration: 2 }} className="h-80">
         <Image
           width={0}
           height={0}

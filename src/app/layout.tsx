@@ -8,8 +8,12 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
+import { Footer } from "@/components/footer";
+import { Header } from "@/components/header";
+
 import { ShoppingListProvider } from "@/contexts/CartContext";
 import { PointsContextProvider } from "@/contexts/PointsContext";
+
 import { cn } from "@/lib/utils";
 import "../styles/globals.css";
 
@@ -27,13 +31,17 @@ export default function RootLayout({
     <html lang="pt-br">
       <body
         className={cn(
-          "bg-zinc-50 min-h-screen font-sans antialiased w-full",
+          "bg-gray-200 min-h-screen antialiased w-full",
           inter.className,
         )}
       >
         <ThemeProvider attribute="class" defaultTheme="light">
           <PointsContextProvider>
-            <ShoppingListProvider>{children}</ShoppingListProvider>
+            <ShoppingListProvider>
+              <Header />
+              {children}
+              <Footer />
+            </ShoppingListProvider>
           </PointsContextProvider>
         </ThemeProvider>
       </body>

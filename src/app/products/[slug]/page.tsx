@@ -1,7 +1,7 @@
 import { PromotionalAlert } from "@/components/PromotionalAlert";
+import { BackButton } from "@/components/back-button";
 import { sanity } from "@/lib/sanity";
 import { Product } from "@/models";
-import { ArrowLeftIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
 
 type ProductProps = {
@@ -33,9 +33,7 @@ export default async function Product({ params }: ProductProps) {
 
   return (
     <main className="relative">
-      <button>
-        <ArrowLeftIcon color="black" />
-      </button>
+      <BackButton />
 
       <h1>{product.name}</h1>
 
